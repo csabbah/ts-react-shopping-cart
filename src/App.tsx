@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useQuery } from "react-query";
-// Material UI components
+// Components
+import Item from "./Item/Item";
 import Drawer from "@material-ui/core/Drawer";
 import LinearProgress from "@material-ui/core/LinearProgress";
 import Grid from "@material-ui/core/Grid";
@@ -32,9 +33,29 @@ function App() {
     getProducts
   );
 
-  if (!isLoading) console.log(data);
+  const getTotalItems = () => null;
 
-  return <div>Start</div>;
+  const handleAddToCart = (clickedItem: CartItemType) => null;
+
+  const handleRemoveFromCart = () => null;
+
+  // While loading, a bar will display above the window to show that items are loading
+  if (isLoading) return <LinearProgress />;
+  if (error) return <div>Something went wrong...</div>;
+
+  return (
+    <Wrapper>
+      <Grid container spacing={3}>
+        {!isLoading &&
+          data?.map((item) => (
+            <Grid item key={item.id} xs={12} sm={4}>
+              {/* Reminder '<Item/>' is a component we created */}
+              <Item item={item} handleAddToCart={handleAddToCart} />
+            </Grid>
+          ))}
+      </Grid>
+    </Wrapper>
+  );
 }
 
 export default App;
