@@ -4,12 +4,13 @@ import { CartItemType } from "../App";
 // STyles
 import { Wrapper } from "./Item.style";
 
-type Props = {
+type ItemProps = {
   item: CartItemType;
   handleAddToCart: (clickedItem: CartItemType) => void;
 };
-// 'FC' = React functional component
-const Item: React.FC<Props> = ({ item, handleAddToCart }) => (
+// 'React.FC<ItemProps>' = 'FC' React Functional component
+// Original method > const Item: React.FC<ItemProps> = ({ item, handleAddToCart }) => (
+const Item = ({ item, handleAddToCart }: ItemProps) => (
   <Wrapper>
     <img src={item.image} alt={item.title}></img>
     <div>
