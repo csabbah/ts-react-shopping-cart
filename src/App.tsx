@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useQuery } from "react-query";
 // Components
 import Item from "./Item/Item";
+import Cart from "./Cart/Cart";
 import Drawer from "@material-ui/core/Drawer";
 import LinearProgress from "@material-ui/core/LinearProgress";
 import Grid from "@material-ui/core/Grid";
@@ -38,7 +39,7 @@ function App() {
   );
 
   // Iterate through all the items in the cart and add up the total amount in the cart
-  // We can use {} + a return statement or do an implicit return by not using {}
+  // We can use {} + a return statement for Explicit or do an Implicit return by not using {}
   const getTotalItems = (items: CartItemType[]) =>
     // 'accumulator' will take an initial value of 0 which is set at the end of the reduce method
     items.reduce((accumulator: number, item) => accumulator + item.amount, 0);
@@ -55,7 +56,11 @@ function App() {
     // Wrapper is an exported Styled component 'App.styles.ts', it acts as a regular .CSS file
     <Wrapper>
       <Drawer anchor="right" open={cartOpen} onClose={() => setCartOpen(false)}>
-        Cart Goes here
+        <Cart
+          cartItems={cartItems}
+          addToCart={handleAddToCart}
+          removeFromCart={handleRemoveFromCart}
+        ></Cart>
       </Drawer>
       <StyledButton onClick={() => setCartOpen(true)}>
         <Badge badgeContent={getTotalItems(cartItems)} color="error">
