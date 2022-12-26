@@ -37,8 +37,11 @@ function App() {
     getProducts
   );
 
-  // Takes in all the data items
-  const getTotalItems = (items: CartItemType[]) => null;
+  // Iterate through all the items in the cart and add up the total amount in the cart
+  // We can use {} + a return statement or do an implicit return by not using {}
+  const getTotalItems = (items: CartItemType[]) =>
+    // 'accumulator' will take an initial value of 0 which is set at the end of the reduce method
+    items.reduce((accumulator: number, item) => accumulator + item.amount, 0);
 
   const handleAddToCart = (clickedItem: CartItemType) => null;
 
