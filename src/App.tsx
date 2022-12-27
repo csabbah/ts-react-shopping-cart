@@ -10,6 +10,7 @@ import AddShoppingCartIcon from "@material-ui/icons/AddShoppingCart";
 import Badge from "@material-ui/core/Badge";
 // Styles
 import { Wrapper, StyledButton } from "./App.styles";
+import { Redeem } from "@material-ui/icons";
 // Types
 export type CartItemType = {
   id: number;
@@ -92,7 +93,13 @@ function App() {
           removeFromCart={handleRemoveFromCart}
         ></Cart>
       </Drawer>
-      <StyledButton onClick={() => setCartOpen(true)}>
+      <StyledButton
+        style={{
+          backgroundColor: "rgb(200,200,200)",
+          boxShadow: "0 0 2px 2px rgba(0,0,0,0.05)",
+        }}
+        onClick={() => setCartOpen(true)}
+      >
         <Badge
           overlap="rectangular"
           badgeContent={getTotalItems(cartItems)}

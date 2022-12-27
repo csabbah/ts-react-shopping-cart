@@ -22,4 +22,15 @@ export const Wrapper = styled.div`
     object-fit: cover;
     margin-left: 40px;
   }
+
+  @media (max-width: 600px) {
+    img {
+      max-width: 90px;
+      margin-left: 20px;
+    }
+
+    p {
+      font-size: 16px;
+    }
+  }
 `;
