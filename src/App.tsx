@@ -61,7 +61,9 @@ function App() {
     });
   };
 
-  const handleRemoveFromCart = () => null;
+  const handleRemoveFromCart = (id: number) => {
+    // setCartItems((prev) => {});
+  };
 
   // While loading, a bar will display above the window to show that items are loading
   if (isLoading) return <LinearProgress />;
