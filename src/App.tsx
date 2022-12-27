@@ -62,7 +62,20 @@ function App() {
   };
 
   const handleRemoveFromCart = (id: number) => {
-    // setCartItems((prev) => {});
+    setCartItems((prev) =>
+      prev.reduce((accumulator, item) => {
+        if (item.id === id) {
+          // If item amount is 1, return accumulator & do nothing
+          if (item.amount === 1) return accumulator;
+          // Otherwise return a new array
+          return [...accumulator, { ...item, amount: item.amount - 1 }];
+        } else {
+          // If it's not the item we clicked on, return it as is
+          return [...accumulator, item];
+        }
+        // Accumulator starts as an empty array that is specified as an array CartItemType
+      }, [] as CartItemType[])
+    );
   };
 
   // While loading, a bar will display above the window to show that items are loading

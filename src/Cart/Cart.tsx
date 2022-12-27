@@ -10,6 +10,11 @@ type CartProps = {
 };
 
 const Cart = ({ cartItems, addToCart, removeFromCart }: CartProps) => {
+  const calculateTotal = (items: CartItemType[]) =>
+    items.reduce(
+      (accumulator: number, item) => accumulator + item.amount * item.price,
+      0
+    );
   return (
     <Wrapper>
       <h2>Your Shopping Cart</h2>
@@ -22,6 +27,7 @@ const Cart = ({ cartItems, addToCart, removeFromCart }: CartProps) => {
           removeFromCart={removeFromCart}
         />
       ))}
+      <p>Total Price: ${calculateTotal(cartItems).toFixed(2)}</p>
     </Wrapper>
   );
 };
