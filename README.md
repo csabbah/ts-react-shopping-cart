@@ -1,46 +1,69 @@
-# Getting Started with Create React App
+# ts-react-shopping-cart - Dec 2022 - Carlos Sabbah
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+- [Description](#Description)
+- [Installation](#Installation)
+- [Local Usage](#Local-Usage)
+- [Links](#Links)
+- [Questions](#Questions)
+- [License](#License)
 
-### `npm start`
+##
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Description
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+ts-react-shopping-cart is a feature-rich shopping cart engine built with TypeScript, Vite, React and hosted on Vercel. This tool allows users to easily add and update items in their cart, making it simple to keep track of their purchases. If a user adds the same product more than once, the quantity will be updated automatically. And if the quantity is reduced below 1, the item will be removed from the cart. Hosted on Vercel, ts-react-shopping-cart is reliable and efficient, providing a seamless shopping experience for users.
 
-### `npm test`
+## Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. To install application, clone the main project via the HTTP or SSH link on github.
 
-### `npm run build`
+```
+git clone
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. Once cloned, open the project folder in your text editor and run the following command in terminal to install all dependencies.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
+npm install
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Local-Usage
 
-### `npm run eject`
+To view the application in your local browser, cd into the root directory path and run this in terminal:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```
+npm run dev
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Links
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+[Link to live application](https://ts-react-shopping-cart.vercel.app/)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Built With
 
-## Learn More
+- React
+- React-query
+- Material-ui
+- TSX / TypeScript
+- Styled-components
+- Vite
+- Vercel
+- HTML
+- CSS
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Questions
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+[My portfolio](https://csabbah.github.io/Carlos-Sabbah-portfolio/)
+
+To view my other repositories:
+[Github](https://github.com/csabbah)
+
+If you have questions about this application or general inquiry, please reach out to me via email: carlossabbah@hotmail.com
+
+## License
+
+This project is covered under the MIT License.
