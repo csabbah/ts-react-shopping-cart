@@ -24,4 +24,16 @@ export const Wrapper = styled.div`
     padding: 1rem;
     height: 100%;
   }
+
+  @media (max-width: 900px) {
+    p {
+      font-size: 14px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    p {
+      font-size: 16px;
+    }
+  }
 `;

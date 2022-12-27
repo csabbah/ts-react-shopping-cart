@@ -10,7 +10,6 @@ import AddShoppingCartIcon from "@material-ui/icons/AddShoppingCart";
 import Badge from "@material-ui/core/Badge";
 // Styles
 import { Wrapper, StyledButton } from "./App.styles";
-import { Redeem } from "@material-ui/icons";
 // Types
 export type CartItemType = {
   id: number;
@@ -108,10 +107,10 @@ function App() {
           <AddShoppingCartIcon />
         </Badge>
       </StyledButton>
-      <Grid container spacing={3}>
+      <Grid container spacing={4}>
         {!isLoading &&
           data?.map((item) => (
-            <Grid item key={item.id} xs={12} sm={4}>
+            <Grid item key={item.id} xs={12} sm={4} lg={3}>
               {/* Reminder '<Item/>' is a component we created */}
               <Item item={item} handleAddToCart={handleAddToCart} />
             </Grid>
